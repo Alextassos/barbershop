@@ -104,7 +104,7 @@ body{
 #menu ul li a{
     display: flex;
     text-decoration: none;
-    font-size: 23px;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.6);
     font-weight: 100;
     margin-top: 15px;
@@ -145,6 +145,21 @@ body{
     background-size: 100% 1px;
     padding: 10px;
 }
+#sign {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;                   
+    font-weight: 100;                 
+    text-transform: uppercase;         
+    letter-spacing: -1px;               
+    color: rgba(255, 255, 255, 0.55);  
+    
+    
+    font-style: normal !important;     
+    transform: none !important;        
+    display: inline-block;
+}
+
+
 #about-photo {
     flex: 1; 
     height: 500px;
@@ -184,7 +199,7 @@ body{
     display: flex;
     align-items: center;    
     text-align: center;
-    padding: 60px 0;        
+    padding: 30px 0;        
     overflow: hidden;       
     width: 100%;
 }
@@ -225,18 +240,45 @@ body{
 .serve {
     display: flex;
     justify-content: center;
-    padding: 80px 20px;
+    padding: 0;         
+    margin: 0;          
+    overflow: hidden; 
+    width: 100%;
 }
 
 #serve {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column; 
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 1100px;
-    gap: 60px;
+    width: 100%;        
+    max-width: 100%;     
+    padding: 40px 20px;  
 }
+
+#serve::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url('offer.jpeg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center;
+    z-index: -1;
+    filter: blur(4px);  
+    transform: scale(1.05); 
+
+    
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+
+
 
 .serve-text {
     flex: 1; 
@@ -245,23 +287,76 @@ body{
 #title3 {
     display: inline-block;
     font-size: 40px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.5);
     font-weight: 200;
     letter-spacing: -1.5px;
-    background-image: linear-gradient(to right, transparent, white, transparent);
+    background-image: linear-gradient(to right, transparent, rgb(91, 82, 82), transparent);
     background-position: center bottom;
     background-repeat: no-repeat;
-    background-size: 100% 1px;
+    background-size: 100% 2px;
     padding: 10px;
     margin-bottom: 20px;
 }
 
-.serve-paragraph {
+#list {
     color: rgba(255, 255, 255, 0.7);
     font-size: 18px;
     line-height: 1.6;
     font-weight: 100;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgb(71, 67, 67);
+    
+    width: 100%;
+    
+    max-width: 1100px;  
+    margin: 0 auto;    
+    padding: 30px;   
+    box-sizing: border-box;
 }
+
+#list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 20px 40px; 
+}   
+
+#list ul li {
+    font-size: 18px; 
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    list-style-type: none;
+    letter-spacing: -0.5px;
+    font-style: italic;
+    font-weight: 200;
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;           
+    padding: 10px 0;                 
+    
+   
+    width: calc(50% - 20px); 
+     
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+    #list ul li {
+        width: 100%;
+    }
+}
+
+
+
 
 #serve-photo {
     flex: 1; 
@@ -271,7 +366,7 @@ body{
     border-radius: 14px;
 }
 #Contact{
-    height: 200px;
+    height: 400px;
 
 }
 #title4 {
@@ -303,14 +398,15 @@ body{
     margin: 50px auto 0 auto;   
     padding: 30px 40px; 
     width: 100%;
-    max-width: 500px; 
+    max-width: 450px; 
     border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    background: rgba(0, 0, 0, 0.1);
+    
 }
 
 #odo,#til{
-    font-size:18px;
+    font-size:15px;
     color: rgba(255, 255, 255, 0.7);
     letter-spacing: 1px;
     
@@ -338,13 +434,7 @@ text-decoration: none;
 #book:hover{
     color: rgba(255, 255, 255, 0.8);
 }
-.rights{
-    background-color: black;
-    height: 20px;
-   
-    margin-top: 60px;
-    justify-content:baseline;
-}
+
 #name{
     color: beige;
     font-size: 10px;
@@ -368,15 +458,51 @@ text-decoration: none;
 #insta:hover{
     color: rgba(255, 255, 255, 0.8);
 }
-/* Η αρχική κατάσταση των στοιχείων (κρυμμένα) */
+
 .reveal {
     opacity: 0;
     transform: translateY(40px); /* Σπρώχνει το στοιχείο 40px πιο κάτω */
     transition: all 0.9s ease-out; /* Ορίζει την ταχύτητα του εφέ (0.8 δευτερόλεπτα) */
 }
 
-/* Η κατάσταση όταν εμφανίζονται (ενεργοποιείται με τη JavaScript) */
+
 .reveal.active {
     opacity: 1;
     transform: translateY(0); /* Έρχεται στην κανονική του θέση */
 }
+#find{
+    font-size:20px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: -0.5px;
+}
+
+#rights a {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;           
+    width: 100%;                 
+    padding: 15px 40px;           
+    box-sizing: border-box;
+    text-decoration: none;         
+}
+
+
+#rights a span {
+    color: beige;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;    
+}
+
+
+@media (max-width: 768px) {
+    #rights a {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 15px 20px;
+    }
+}
+
+
